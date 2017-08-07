@@ -17,17 +17,17 @@ public class Counter {
 
     public void setCounter(int counter) {
         try {
-            testCounter();
+            testCounter(counter);
         } catch (IllegalArgumentException e) {
-            counter = 0;
+            this.counter = 0;
         } catch (Exception e) {
-            counter = 0;
+            this.counter = 0;
         }
         this.counter = counter;
     }
 
-    private void testCounter() throws IllegalArgumentException {
-        if (counter < 0 )
+    private void testCounter(int counter) throws IllegalArgumentException {
+        if (counter < 0 && counter > 10000000)
             throw new IllegalArgumentException();
     }
 }
