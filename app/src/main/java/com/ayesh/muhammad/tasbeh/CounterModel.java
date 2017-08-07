@@ -11,11 +11,23 @@ public class CounterModel {
         counter = 0;
     }
 
+    public int getCounter() {
+        return counter;
+    }
+
     public void setCounter(int counter) {
+        try {
+            testCounter();
+        } catch (IllegalArgumentException e) {
+            counter = 0;
+        } catch (Exception e) {
+            counter = 0;
+        }
         this.counter = counter;
     }
 
-    public int getCounter() {
-        return counter;
+    private void testCounter() throws IllegalArgumentException {
+        if (counter < 0 )
+            throw new IllegalArgumentException();
     }
 }
