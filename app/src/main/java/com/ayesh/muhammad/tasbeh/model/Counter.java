@@ -1,13 +1,13 @@
-package com.ayesh.muhammad.tasbeh;
+package com.ayesh.muhammad.tasbeh.model;
 
 /**
  * Created by muhammad on 29/07/17.
  */
 
-public class CounterModel {
+public class Counter {
     private int counter;
 
-    public CounterModel() {
+    public Counter() {
         counter = 0;
     }
 
