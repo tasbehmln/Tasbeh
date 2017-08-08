@@ -3,11 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#c2c2c2"
     >
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/list_view_main" />
+        android:id="@+id/list_view_main"
+        android:divider="#c26767"
+        android:dividerHeight="1dip"/>
 
 </LinearLayout>

@@ -17,11 +17,10 @@ public class DataHolder {
     }
 
     private static void implementTheDataHere(ArrayList<Object> data) {
-        data.add(new Data("أذكار الصلاة", R.drawable.sunrise));
-        data.add(new Data("أذكار الصباح", R.drawable.sunrise));
-        data.add(new Data("أذكا المساء", R.drawable.evening));
+        data.add(new Data("أذكار الصلاة", R.drawable.masjed));
+        data.add(new Data("أذكار الصباح", R.drawable.sunrise1));
+        data.add(new Data("أذكار المساء", R.drawable.evening));
         data.add(new Data("أذكار النوم", R.drawable.sleep));
-
     }
 
     /**

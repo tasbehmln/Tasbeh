@@ -25,6 +25,7 @@ public class ViewHolder {
         textView.setText(((Data)getData().get(position)).getText());
         icon = row.findViewById(R.id.icon_row);
         icon.setImageResource(((Data)getData().get(position)).getIcon());
+
     }
 
 

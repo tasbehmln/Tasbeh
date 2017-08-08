@@ -12,7 +12,7 @@ public class Data {
 
     public Data(String rowTile, @DrawableRes int icon) {
         this.text = rowTile;
-        this.resource = resource;
+        this.resource = icon;
     }
 
     public String getText() {

@@ -26,6 +26,10 @@ public class Counter {
         this.counter = counter;
     }
 
+    public void increaseCounter() {
+        counter++;
+    }
+
     private void testCounter(int counter) throws IllegalArgumentException {
         if (counter < 0 && counter > 10000000)
             throw new IllegalArgumentException();

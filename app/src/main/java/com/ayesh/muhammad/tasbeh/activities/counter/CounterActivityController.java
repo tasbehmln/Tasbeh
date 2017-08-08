@@ -20,6 +20,7 @@ class CounterActivityController {
         this.mainActivity = mainActivity;
         this.activityView = new CounterActivityView(mainActivity);
         this.counter = new Counter();
+        counterText = (TextView) mainActivity.findViewById(R.id.counter);
     }
 
 
@@ -39,8 +40,7 @@ class CounterActivityController {
     }
 
     private void activityOnClickModel() {
-        counterText = (TextView) mainActivity.findViewById(R.id.counter);
-        counter.setCounter(counter.getCounter() + 1);
+        counter.increaseCounter();
         counterText.setText(counter.getCounter() + "");
     }
 
