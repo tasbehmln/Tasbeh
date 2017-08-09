@@ -7,6 +7,14 @@ package com.ayesh.muhammad.tasbeh.model;
 public class Category {
     private String title,imageFileName;
 
+    public Category(String title, String imageFileName) {
+        this.title = title;
+        this.imageFileName = imageFileName;
+    }
+
+    public Category() {
+    }
+
     public String getImageFileName() {
         return imageFileName;
     }
