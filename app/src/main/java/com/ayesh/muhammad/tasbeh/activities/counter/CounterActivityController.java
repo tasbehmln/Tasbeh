@@ -2,6 +2,7 @@ package com.ayesh.muhammad.tasbeh.activities.counter;
 
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.ayesh.muhammad.tasbeh.R;
