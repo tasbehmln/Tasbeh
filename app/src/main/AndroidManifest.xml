@@ -9,27 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        WelcomeActivity
-        <activity android:name=".WelcomeActivity">
+
+        <activity android:name=".activities.counter.CounterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!-- <activity -->
-        <!-- android:name=".Main2Activity" -->
-        <!-- android:label="@string/title_activity_main2" -->
-        <!-- android:theme="@style/AppTheme.NoActionBar"></activity> -->
-        <!-- <activity android:name=".MainActivity3" /> -->
-        <activity android:name=".activities.counter.CounterActivity" />
-        <activity android:name=".LanguageActivity"></activity>
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+         <!--<activity-->
+         <!--android:name=".Main2Activity"-->
+         <!--android:label="@string/title_activity_main2"-->
+         <!--android:theme="@style/AppTheme.NoActionBar"></activity>-->
+        <!--<activity android:name=".MainActivity3" />-->
     </application>
 
 </manifest>
