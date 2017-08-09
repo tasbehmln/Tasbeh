@@ -1,6 +1,7 @@
 package com.ayesh.muhammad.tasbeh.model.ListView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -9,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
+import com.ayesh.muhammad.tasbeh.MainActivity;
+
 /**
  * Created by muhammad on 03/08/17.
  */
@@ -16,10 +19,12 @@ import android.widget.ArrayAdapter;
 public class ListViewAdapter extends ArrayAdapter{
     private int resource;
     private ViewHolder holder;
+    private Context context;
 
     public ListViewAdapter(@NonNull Context context, @LayoutRes int resource) {
         super(context, resource, DataHolder.getData());
         this.resource = resource;
+        this.context = context;
     }
 
     @NonNull
@@ -38,6 +43,7 @@ public class ListViewAdapter extends ArrayAdapter{
         holder.setData(position);
     }
 
+
     private View createView(int position, @NonNull ViewGroup parent) {
         View convertView;
         convertView = inflate(parent);
@@ -51,9 +57,13 @@ public class ListViewAdapter extends ArrayAdapter{
         convertView.setTag(holder);
     }
 
+
     private View inflate(@NonNull ViewGroup parent) {
         return LayoutInflater.from(getContext()).inflate(resource, parent, false);
     }
+
+
+
 
 
 

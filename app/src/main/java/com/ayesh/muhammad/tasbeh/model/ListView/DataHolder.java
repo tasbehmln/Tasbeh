@@ -1,11 +1,8 @@
 package com.ayesh.muhammad.tasbeh.model.ListView;
 
-import android.widget.Toast;
-
-import com.ayesh.muhammad.tasbeh.MainActivity;
 import com.ayesh.muhammad.tasbeh.R;
-import com.ayesh.muhammad.tasbeh.model.Category;
-import com.ayesh.muhammad.tasbeh.services.JsonParser;
+import com.ayesh.muhammad.tasbeh.WelcomeActivity;
+import com.ayesh.muhammad.tasbeh.activities.counter.CounterActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,19 +17,12 @@ public class DataHolder {
     public static List<Object> getData() {
         return data;
     }
-    public static List<Category> list;
+
     private static void implementTheDataHere(ArrayList<Object> data) {
-//        data.add(new Data("أذكار الصلاة", R.drawable.masjed));
-//        data.add(new Data("أذكار الصباح", R.drawable.sunrise1));
-//        data.add(new Data("أذكار المساء", R.drawable.evening));
-//        data.add(new Data("أذكار النوم", R.drawable.sleep));
-
-        list = JsonParser.getCategories(MainActivity.getContext());
-        for (Category c:list ) {
-//            Toast.makeText(MainActivity.getContext(),c.getTitle()+" "+c.getImageFileName(),Toast.LENGTH_LONG).show();
-            data.add(new Category(c.getTitle(),c.getImageFileName()));
-        }
-
+        data.add(new Data(R.string.app_name, R.drawable.masjed, CounterActivity.class));
+        data.add(new Data(R.string.app_name, R.drawable.sunrise1, WelcomeActivity.class));
+        data.add(new Data(R.string.app_name, R.drawable.evening, CounterActivity.class));
+        data.add(new Data(R.string.app_name, R.drawable.sleep, WelcomeActivity.class));
     }
 
     /**

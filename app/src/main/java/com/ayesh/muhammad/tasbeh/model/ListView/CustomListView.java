@@ -1,9 +1,16 @@
 package com.ayesh.muhammad.tasbeh.model.ListView;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.annotation.IdRes;
 import android.support.annotation.LayoutRes;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
+
+import com.ayesh.muhammad.tasbeh.MainActivity;
+import com.ayesh.muhammad.tasbeh.activities.counter.CounterActivity;
 
 /**
  * Makes a Customized List view.
@@ -44,6 +51,17 @@ public class CustomListView {
     public void makeView() {
         this.adapter = new ListViewAdapter(this.context, listViewLayout);
         ((ListView) context.findViewById(listViewTagId)).setAdapter(adapter);
+
+        ListView listView = context.findViewById(listViewTagId);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(context,((Data)DataHolder.getData().get(i)).getActivity());
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                view.getContext().startActivity(intent);
+            }
+        });
     }
 
     /**
