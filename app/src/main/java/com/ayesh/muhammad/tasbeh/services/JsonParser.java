@@ -4,7 +4,7 @@ package com.ayesh.muhammad.tasbeh.services;
 import android.content.Context;
 import android.util.Log;
 
-import com.ayesh.muhammad.tasbeh.model.Category;
+import com.ayesh.muhammad.tasbeh.model.Category_Hader;
 import com.ayesh.muhammad.tasbeh.model.Theker;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -18,10 +18,10 @@ public class JsonParser {
     private static String language = "english";
 
     public static List<Theker> thekerList =new ArrayList<>();
-    public static List<Category> categoryList =new ArrayList<>();
+    public static List<Category_Hader> categoryHaderList =new ArrayList<>();
     private static String english;
 
-    public static List<Category> getCategories(Context context) {
+    public static List<Category_Hader> getCategories(Context context) {
 
         String jsonStr = FileHelper.ReadFromFile("data.json",context).toString();
 
@@ -40,12 +40,12 @@ public class JsonParser {
                     String title = c.getString(language +"Title");
                     String imageFileName = c.getString("imageFileName");
 
-                    Category tempCategory=new Category();
-                    tempCategory.setTitle(title);
-                    tempCategory.setImageFileName(imageFileName);
+                    Category_Hader tempCategoryHader =new Category_Hader();
+                    tempCategoryHader.setTitle(title);
+                    tempCategoryHader.setImageFileName(imageFileName);
 
                     // adding contact to contact list
-                    categoryList.add(tempCategory);
+                    categoryHaderList.add(tempCategoryHader);
                 }
             } catch (final JSONException e) {
                 Log.e(TAG, "Json parsing error: " + e.getMessage());
@@ -57,7 +57,7 @@ public class JsonParser {
             Log.e(TAG, "Couldn't get json from server.");
         }
 
-        return categoryList;
+        return categoryHaderList;
     }
 
     public static List<Theker> getAllThekers(Context context, String category) {

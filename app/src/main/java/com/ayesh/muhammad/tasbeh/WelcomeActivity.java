@@ -4,14 +4,6 @@ import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Toast;
-
-import com.ayesh.muhammad.tasbeh.activities.counter.CounterActivity;
-import com.ayesh.muhammad.tasbeh.model.Category;
-import com.ayesh.muhammad.tasbeh.services.JsonParser;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class WelcomeActivity extends AppCompatActivity {
 

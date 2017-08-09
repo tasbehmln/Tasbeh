@@ -7,10 +7,6 @@ import android.support.annotation.LayoutRes;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
-
-import com.ayesh.muhammad.tasbeh.MainActivity;
-import com.ayesh.muhammad.tasbeh.activities.counter.CounterActivity;
 
 /**
  * Makes a Customized List view.
@@ -24,7 +20,7 @@ import com.ayesh.muhammad.tasbeh.activities.counter.CounterActivity;
 public class CustomListView {
     private int listViewTagId;
     private int listViewLayout;
-    private Activity context;
+    private Activity activity;
     private ListViewAdapter adapter;
 
     /**
@@ -39,25 +35,26 @@ public class CustomListView {
      * @param sampleListView Layout Reference of the customized layout that represents the row, (ex:R.layout.rowLayoutXmlFileName)
      */
     public CustomListView(Activity activity, @IdRes int listView, @LayoutRes int sampleListView) {
-        DataHolder.invokeData();
+        DataHolder.invokeData(activity);
         this.listViewTagId = listView;
         this.listViewLayout = sampleListView;
-        this.context = activity;
+        this.activity = activity;
+
     }
 
     /**
      * Forms the ListView
      */
     public void makeView() {
-        this.adapter = new ListViewAdapter(this.context, listViewLayout);
-        ((ListView) context.findViewById(listViewTagId)).setAdapter(adapter);
+        this.adapter = new ListViewAdapter(this.activity, listViewLayout);
+        ((ListView) activity.findViewById(listViewTagId)).setAdapter(adapter);
 
-        ListView listView = context.findViewById(listViewTagId);
+        ListView listView = activity.findViewById(listViewTagId);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(context,((Data)DataHolder.getData().get(i)).getActivity());
+                Intent intent = new Intent(activity,((Category)DataHolder.getData().get(i)).getActivity());
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 view.getContext().startActivity(intent);
             }
@@ -69,7 +66,7 @@ public class CustomListView {
      * @return listView.
      */
     public ListView getListView() {
-        return (ListView) context.findViewById(listViewTagId);
+        return (ListView) activity.findViewById(listViewTagId);
     }
 
     /**

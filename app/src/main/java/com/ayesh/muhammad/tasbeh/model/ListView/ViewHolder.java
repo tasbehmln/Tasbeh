@@ -22,9 +22,9 @@ public class ViewHolder {
 
     public void setData(int position) {
         textView = row.findViewById(R.id.title_row);
-        textView.setText(((Data)getData().get(position)).getText());
+        textView.setText(((Category)getData().get(position)).getText());
         icon = row.findViewById(R.id.icon_row);
-        icon.setImageResource(((Data)getData().get(position)).getIcon());
+        icon.setImageResource(((Category)getData().get(position)).getIcon());
     }
 
 

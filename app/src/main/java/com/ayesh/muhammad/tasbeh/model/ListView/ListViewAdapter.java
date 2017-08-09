@@ -23,7 +23,6 @@ public class ListViewAdapter extends ArrayAdapter{
 
     public ListViewAdapter(@NonNull Context context, @LayoutRes int resource) {
         super(context, resource, DataHolder.getData());
-        DataHolder.setActivity(this);
         this.resource = resource;
         this.context = context;
 

@@ -7,12 +7,12 @@ import android.support.annotation.StringRes;
  * Created by muhammad on 03/08/17.
  */
 
-public class Data {
+public class Category {
     private int text;
     private int resource;
     private Class<?> activity;
 
-    public Data(@StringRes int rowTile, @DrawableRes int icon, Class<?> activity) {
+    public Category(@StringRes int rowTile, @DrawableRes int icon, Class<?> activity) {
         this.text = rowTile;
         this.resource = icon;
         this.activity = activity;
