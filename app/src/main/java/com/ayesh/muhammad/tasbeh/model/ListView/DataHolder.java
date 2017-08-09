@@ -1,5 +1,7 @@
 package com.ayesh.muhammad.tasbeh.model.ListView;
 
+import android.widget.Toast;
+
 import com.ayesh.muhammad.tasbeh.R;
 import com.ayesh.muhammad.tasbeh.WelcomeActivity;
 import com.ayesh.muhammad.tasbeh.activities.counter.CounterActivity;
@@ -13,12 +15,14 @@ import java.util.List;
 
 public class DataHolder {
     private static ArrayList<Object> data;
+    private static ListViewAdapter activity;
 
     public static List<Object> getData() {
         return data;
     }
 
     private static void implementTheDataHere(ArrayList<Object> data) {
+        Toast.makeText(activity.getContext(), "I am here", Toast.LENGTH_SHORT).show();
         data.add(new Data(R.string.app_name, R.drawable.masjed, CounterActivity.class));
         data.add(new Data(R.string.app_name, R.drawable.sunrise1, WelcomeActivity.class));
         data.add(new Data(R.string.app_name, R.drawable.evening, CounterActivity.class));
@@ -37,4 +41,7 @@ public class DataHolder {
         }
     }
 
+    public static void setActivity(ListViewAdapter activity) {
+        DataHolder.activity = activity;
+    }
 }
