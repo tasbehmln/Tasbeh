@@ -8,6 +8,14 @@ import android.support.annotation.LayoutRes;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
+
+import com.ayesh.muhammad.tasbeh.R;
+import com.ayesh.muhammad.tasbeh.WelcomeActivity;
+import com.ayesh.muhammad.tasbeh.activities.counter.CounterActivity;
+
+import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * Makes a Customized List view.
@@ -23,6 +31,8 @@ public class CustomListView {
     private int listViewLayout;
     private Activity activity;
     private ListViewAdapter adapter;
+    private static ArrayList<Object> data;
+    public static String []categories;
 
     /**
      * Constructor.
@@ -35,8 +45,7 @@ public class CustomListView {
      * <li>
      * @param sampleListView Layout Reference of the customized layout that represents the row, (ex:R.layout.rowLayoutXmlFileName)
      */
-    public CustomListView(Activity activity, Context context, @IdRes int listView, @LayoutRes int sampleListView) {
-        DataHolder.invokeData(activity,context);
+    public CustomListView(Activity activity, @IdRes int listView, @LayoutRes int sampleListView) {
         this.listViewTagId = listView;
         this.listViewLayout = sampleListView;
         this.activity = activity;
@@ -47,34 +56,49 @@ public class CustomListView {
      * Forms the ListView
      */
     public void makeView() {
-        this.adapter = new ListViewAdapter(this.activity, listViewLayout);
-        ((ListView) activity.findViewById(listViewTagId)).setAdapter(adapter);
+        invokeData();
+        this.adapter = new ListViewAdapter(this.activity, listViewLayout, data);
 
         ListView listView = activity.findViewById(listViewTagId);
+        listView.setAdapter(adapter);
 
+        setOnItemClickListener(listView);
+    }
+
+    public void invokeData() {
+        try {
+            data = new ArrayList<>();
+            implementTheDataHere(data);
+        } catch (NullPointerException e) {
+            implementTheDataHere(data);
+        }
+    }
+
+    private void implementTheDataHere(ArrayList<Object> data) {
+        categories= activity.getResources().getStringArray(R.array.categories);
+        for (String s :categories) {
+
+            Toast.makeText(activity.getApplicationContext(), s, Toast.LENGTH_SHORT).show();
+        }
+
+        data.add(new Category(categories[0], R.drawable.sunrise1, WelcomeActivity.class));
+        data.add(new Category(categories[1], R.drawable.evening, CounterActivity.class));
+        data.add(new Category(categories[2], R.drawable.masjed, CounterActivity.class));
+        data.add(new Category(categories[3], R.drawable.sleep, WelcomeActivity.class));
+    }
+
+    private void setOnItemClickListener(ListView listView) {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(activity,((Category)DataHolder.getData().get(i)).getActivity());
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                view.getContext().startActivity(intent);
+                goToActivity(view, i);
             }
         });
     }
 
-    /**
-     * Returns a reference of the listView.
-     * @return listView.
-     */
-    public ListView getListView() {
-        return (ListView) activity.findViewById(listViewTagId);
-    }
-
-    /**
-     * Returns a reference of the containing adapter of listView.
-     * @return {@link ListViewAdapter}.
-     */
-    public ListViewAdapter getAdapter() {
-        return adapter;
+    private void goToActivity(View view, int i) {
+        Intent intent = new Intent(activity,((Category) data.get(i)).getActivity());
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        view.getContext().startActivity(intent);
     }
 }

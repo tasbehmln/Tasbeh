@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import com.ayesh.muhammad.tasbeh.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ViewHolder {
@@ -13,22 +14,21 @@ public class ViewHolder {
     private View row;
     private TextView textView;
     private ImageView icon;
+    private ArrayList<Object> data;
 
 
-    public ViewHolder(int position, View view) {
+    public ViewHolder(int position, View view, ArrayList<Object> data) {
         this.position = position;
         this.row = view;
+        this.data = data;
     }
 
     public void setData(int position) {
         textView = row.findViewById(R.id.title_row);
-        textView.setText(((Category)getData().get(position)).getText());
+        textView.setText(((Category) data.get(position)).getText());
         icon = row.findViewById(R.id.icon_row);
-        icon.setImageResource(((Category)getData().get(position)).getIcon());
+        icon.setImageResource(((Category) data.get(position)).getIcon());
     }
 
 
-    private List<Object> getData() {
-        return DataHolder.getData();
-    }
 }
