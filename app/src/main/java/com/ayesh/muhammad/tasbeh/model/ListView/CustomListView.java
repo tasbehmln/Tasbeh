@@ -48,33 +48,24 @@ public class CustomListView {
      */
     public void makeView() {
         this.adapter = new ListViewAdapter(this.activity, listViewLayout);
-        ((ListView) activity.findViewById(listViewTagId)).setAdapter(adapter);
 
         ListView listView = activity.findViewById(listViewTagId);
+        listView.setAdapter(adapter);
+        setOnItemClickListener(listView);
+    }
 
+    private void setOnItemClickListener(ListView listView) {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(activity,((Category)DataHolder.getData().get(i)).getActivity());
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                view.getContext().startActivity(intent);
+                goToActivity(view, i);
             }
         });
     }
 
-    /**
-     * Returns a reference of the listView.
-     * @return listView.
-     */
-    public ListView getListView() {
-        return (ListView) activity.findViewById(listViewTagId);
-    }
-
-    /**
-     * Returns a reference of the containing adapter of listView.
-     * @return {@link ListViewAdapter}.
-     */
-    public ListViewAdapter getAdapter() {
-        return adapter;
+    private void goToActivity(View view, int i) {
+        Intent intent = new Intent(activity,((Category) DataHolder.getData().get(i)).getActivity());
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        view.getContext().startActivity(intent);
     }
 }

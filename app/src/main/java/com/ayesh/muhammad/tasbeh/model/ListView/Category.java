@@ -1,7 +1,6 @@
 package com.ayesh.muhammad.tasbeh.model.ListView;
 
 import android.support.annotation.DrawableRes;
-import android.support.annotation.StringRes;
 
 /**
  * Created by muhammad on 03/08/17.
