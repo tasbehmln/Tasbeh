@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name= "categories">
+        <item>أذكار الصباح</item>
+        <item>أذكار المساء</item>
+        <item>أذكار الصلاة</item>
+        <item>أذكار النوم</item>
+    </string-array>
+</resources>

@@ -16,8 +16,7 @@
     <string name="action_settings">Settings</string>
 
     <string-array name="categories">
-        <!--<item>Morning\'s Athkar</item>-->
-        <item>أذكار الصباح</item>
+        <item>Morning\'s Athkar</item>
         <item>Evening\'s Athkar</item>
         <item>Prayer\'s Athkar</item>
         <item>Sleep\'s Athkar</item>
