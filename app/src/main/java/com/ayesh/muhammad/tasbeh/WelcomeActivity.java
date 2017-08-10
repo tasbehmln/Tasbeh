@@ -6,7 +6,6 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.ayesh.muhammad.tasbeh.services.MyContextWrapper;
 
 public class WelcomeActivity extends AppCompatActivity {
 

@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.ayesh.muhammad.tasbeh.R;
-import com.ayesh.muhammad.tasbeh.services.MyContextWrapper;
 
 public class CounterActivity extends AppCompatActivity {
 
