@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        CustomListView listView = new CustomListView(this,this, R.id.list_view_main, R.layout.listview_row_main);
+        CustomListView listView = new CustomListView(this, R.id.list_view_main, R.layout.listview_row_main);
         listView.makeView();
     }
 }

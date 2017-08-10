@@ -12,6 +12,8 @@ import android.widget.ArrayAdapter;
 
 import com.ayesh.muhammad.tasbeh.MainActivity;
 
+import java.util.ArrayList;
+
 /**
  * Created by muhammad on 03/08/17.
  */
@@ -20,11 +22,13 @@ public class ListViewAdapter extends ArrayAdapter{
     private int resource;
     private ViewHolder holder;
     private Context context;
+    private ArrayList<Object> data;
 
-    public ListViewAdapter(@NonNull Context context, @LayoutRes int resource) {
-        super(context, resource, DataHolder.getData());
+    public ListViewAdapter(@NonNull Context context, @LayoutRes int resource, ArrayList<Object> data) {
+        super(context, resource, data);
         this.resource = resource;
         this.context = context;
+        this.data = data;
 
     }
 
@@ -53,7 +57,7 @@ public class ListViewAdapter extends ArrayAdapter{
     }
 
     private void createViewHolder(int position, View convertView) {
-        holder = new ViewHolder(position, convertView);
+        holder = new ViewHolder(position, convertView,data);
         holder.setData(position);
         convertView.setTag(holder);
     }
