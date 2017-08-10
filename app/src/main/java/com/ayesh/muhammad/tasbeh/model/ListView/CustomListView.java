@@ -1,6 +1,7 @@
 package com.ayesh.muhammad.tasbeh.model.ListView;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.IdRes;
 import android.support.annotation.LayoutRes;
@@ -34,8 +35,8 @@ public class CustomListView {
      * <li>
      * @param sampleListView Layout Reference of the customized layout that represents the row, (ex:R.layout.rowLayoutXmlFileName)
      */
-    public CustomListView(Activity activity, @IdRes int listView, @LayoutRes int sampleListView) {
-        DataHolder.invokeData(activity);
+    public CustomListView(Activity activity, Context context, @IdRes int listView, @LayoutRes int sampleListView) {
+        DataHolder.invokeData(activity,context);
         this.listViewTagId = listView;
         this.listViewLayout = sampleListView;
         this.activity = activity;

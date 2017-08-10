@@ -8,17 +8,17 @@ import android.support.annotation.StringRes;
  */
 
 public class Category {
-    private int text;
+    private String text;
     private int resource;
     private Class<?> activity;
 
-    public Category(@StringRes int rowTile, @DrawableRes int icon, Class<?> activity) {
+    public Category( String rowTile, @DrawableRes int icon, Class<?> activity) {
         this.text = rowTile;
         this.resource = icon;
         this.activity = activity;
     }
 
-    public int getText() {
+    public String getText() {
         return text;
     }
 
