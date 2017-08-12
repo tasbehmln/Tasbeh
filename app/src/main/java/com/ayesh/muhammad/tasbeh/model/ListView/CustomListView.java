@@ -81,9 +81,9 @@ public class CustomListView {
             Toast.makeText(activity.getApplicationContext(), s, Toast.LENGTH_SHORT).show();
         }
 
-        data.add(new Category(categories[0], R.drawable.sunrise1, WelcomeActivity.class));
-        data.add(new Category(categories[1], R.drawable.evening, CounterActivity.class));
-        data.add(new Category(categories[2], R.drawable.masjed, CounterActivity.class));
+        data.add(new Category(categories[0], R.drawable.masjed, WelcomeActivity.class));
+        data.add(new Category(categories[1], R.drawable.sunrise1, CounterActivity.class));
+        data.add(new Category(categories[2], R.drawable.evening, CounterActivity.class));
         data.add(new Category(categories[3], R.drawable.sleep, WelcomeActivity.class));
     }
 
