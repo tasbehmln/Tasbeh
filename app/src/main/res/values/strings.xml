@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Tasbeh</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="athkar">أذكار الصلاة</string>
+    <string name="counter">عداد التسبيح</string>
+
+    <string name="sobhan_allah">سبحان الله</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string-array name="categories">
+        <item>Prayer\'s Athkar</item>
+        <item>Morning\'s Athkar</item>
+        <item>Evening\'s Athkar</item>
+        <item>Sleep\'s Athkar</item>
+    </string-array>
+    <string-array name="MorningAthkar">
+        <item>asbahna w asbha l molk lellah</item>
+        <item>la elah ella allah</item>
+    </string-array>
+    <string-array name="EveningAthkar">
+        <item>alhom beka asbahna w beka amsyna</item>
+    </string-array>
+    <string-array name="PrayerAthkar">
+        <item>allahom anta al slam w mnk l slam tbarkt w t3alyt ya z\'a l jlal wl ekram</item>
+        <item>la elah ella allah</item>
+    </string-array>
+    <string-array name="SleepAthkar">
+        <item>noom</item>
+    </string-array>
+</resources>
