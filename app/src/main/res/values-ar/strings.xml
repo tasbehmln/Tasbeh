@@ -6,6 +6,9 @@
         <item>أذكار المساء</item>
         <item>أذكار النوم</item>
     </string-array>
+    <string name="hidden_value_facebook">فيسبوك</string>
+    <string name="hidden_value_share">انشر</string>
+    <string name="hidden_value_favorite">المفضلة</string>
 
     <string-array name="MorningAthkar">
         <item>الحمد لله وحده ، والصلاة والسلام على من لا نبي بعده</item>

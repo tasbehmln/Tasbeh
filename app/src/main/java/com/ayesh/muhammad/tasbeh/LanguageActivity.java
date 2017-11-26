@@ -12,9 +12,12 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.ayesh.muhammad.tasbeh.adapter.CustomAdapter;
+import com.ayesh.muhammad.tasbeh.model.Language;
 import com.ayesh.muhammad.tasbeh.model.ListItem;
+import com.ayesh.muhammad.tasbeh.services.JsonParser;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 
@@ -22,6 +25,9 @@ public class LanguageActivity  extends AppCompatActivity{
     private ListView listView;
     private CustomAdapter customAdapter;
     private ArrayList<ListItem> arrayList;
+    //TODO: initialize languages from json.
+    private List<Language> languages= JsonParser.getLanguages(getApplicationContext());
+
     private String[] languageList =new String[] {
             "Arabic",
             "English"

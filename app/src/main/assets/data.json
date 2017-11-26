@@ -1,62 +1,81 @@
 {
-  "AthkarCategories":[
+  "ApplicationTitle": [
     {
-      "englishTitle":"Morning's Athkar",
-      "arabicTitle":"أذكار الصباح",
-      "imageFileName":"imageNameInResources"
-    },
-    {
-      "englishTitle":"Evening's Athkar",
-      "arabicTitle":"أذكار المساء",
-      "imageFileName":"imageNameInResources"
-    },
-    {
-      "englishTitle":"Prayer's Athkar",
-      "arabicTitle":"أذكار الصباح",
-      "imageFileName":"imageNameInResources"
-    },
-    {
-      "englishTitle":"Sleep's Athkar",
-      "arabicTitle":"أذكار النوم",
-      "imageFileName":"imageNameInResources"
+      "arabicTitle": "تسبيح",
+      "englishTitle": "Tasbeeh"
     }
   ],
-  "MorningAthkar":[
+  "ApplicationLinks": [
     {
-      "englishTheker":"asbahna w asbha l molk lellah",
-      "arabicTheker":"أصبحنا وأصبح الملك لله",
-      "currentCount":0
+      "websiteLink": "",
+      "facebookLink": "",
+      "instagramkLink": "",
+      "twitterLink": ""
+    }
+  ],
+  "FavoriteAthkar": [
+  ],
+  "AthkarCategories": [
+    {
+      "category":"MornigAthkar",
+      "englishTitle": "Morning's Athkar",
+      "arabicTitle": "أذكار الصباح",
+      "icon": "R.drawable.sunrise1"
     },
     {
-      "englishTheker":"la elah ella allah",
-      "arabicTheker":"لا اله الا الله",
-      "currentCount":0
-
+      "category":"MornigAthkar",
+      "englishTitle": "Evening's Athkar",
+      "arabicTitle": "أذكار المساء",
+      "icon": "R.drawable.evening"
+    },
+    {
+      "category":"MornigAthkar",
+      "englishTitle": "Prayer's Athkar",
+      "arabicTitle": "أذكار الصباح",
+      "icon": "R.drawable.masjed"
+    },
+    {
+      "category":"MornigAthkar",
+      "englishTitle": "Sleep's Athkar",
+      "arabicTitle": "أذكار النوم",
+      "icon": "R.drawable.sleep"
     }
   ],
-  "EveningAthkar":[
-    {
-      "englishTheker":"alhom beka asbahna w beka amsyna",
-      "arabicTheker":"اللهم بك اصبحنا وبك أمسينا",
-      "currentCount":0
+  "Athkar":
+  {
+    "MorningAthkar": [
+      {
+        "englishTheker": "asbahna w asbha l molk lellah",
+        "arabicTheker": "أصبحنا وأصبح الملك لله",
+        "currentCount": 0
+      },
+      {
+        "englishTheker": "la elah ella allah",
+        "arabicTheker": "لا اله الا الله",
+        "currentCount": 0
+      }
+    ],
+    "EveningAthkar": [
+      {
+        "englishTheker": "alhom beka asbahna w beka amsyna",
+        "arabicTheker": "اللهم بك اصبحنا وبك أمسينا",
+        "currentCount": 0
+      }
+    ],
+    "PrayerAthkar": [
+      {
+        "englishTheker": "allahom anta al slam w mnk l slam tbarkt w t3alyt ya z'a l jlal wl ekram",
+        "arabicTheker": "اللهم انت السلام ومنك السلام تباركت وتعاليت يا ذا الجلال والإكرام",
+        "currentCount": 0
+      }
+    ],
+    "SleepAthkar": [
+      {
+        "englishTheker": "noom",
+        "arabicTheker": "نووم",
+        "currentCount": 0
+      }
+    ]
+  }
 
-    }
-  ],
-
-  "PrayerAthkar":[
-    {
-      "englishTheker":"allahom anta al slam w mnk l slam tbarkt w t3alyt ya z'a l jlal wl ekram",
-      "arabicTheker":"اللهم انت السلام ومنك السلام تباركت وتعاليت يا ذا الجلال والإكرام",
-      "currentCount":0
-
-    }
-  ],
-
-  "SleepAthkar":[
-    {
-      "englishTheker":"noom",
-      "arabicTheker":"نووم",
-      "currentCount":0
-    }
-  ]
 }

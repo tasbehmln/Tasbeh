@@ -1,12 +1,18 @@
 <resources>
     <string name="app_name">Tasbeh</string>
+    <string name="facebook_app_id">343676932724207</string>
+    <string name="fb_login_protocol_scheme">fb343676932724207</string>
     <string name="dummy_button">Dummy Button</string>
+    <string name="hidden_value_facebook">Facebook</string>
+    <string name="hidden_value_share">Share</string>
+    <string name="hidden_value_favorite">Favorite</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
 
     <string name="athkar">أذكار الصلاة</string>
     <string name="counter">عداد التسبيح</string>
 
     <string name="sobhan_allah">سبحان الله</string>
+    <string name="sobhan_allah_swipe"></string>
     <string name="title_activity_main2">Main2Activity</string>
 
 
@@ -21,9 +27,19 @@
         <item>Evening\'s Athkar</item>
         <item>Sleep\'s Athkar</item>
     </string-array>
+    <string-array name="favorite">
+        <item>asbahna w asbha l molk lellah</item>
+        <item>la elah ella allah</item>
+        <item>asbahna w asbha l molk lellah</item>
+    </string-array>
     <string-array name="MorningAthkar">
         <item>asbahna w asbha l molk lellah</item>
         <item>la elah ella allah</item>
+        <item>asbahna w asbha l molk lellah</item>
+        <item>la elah ella allah</item>
+        <item>asbahna w asbha l molk lellah</item>
+        <item>la elah ella allah</item>
+
     </string-array>
     <string-array name="EveningAthkar">
         <item>alhom beka asbahna w beka amsyna</item>
@@ -35,4 +51,8 @@
     <string-array name="SleepAthkar">
         <item>noom</item>
     </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_favorite">favorite</string>
 </resources>
